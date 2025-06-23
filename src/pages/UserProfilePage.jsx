@@ -37,7 +37,6 @@ const UserProfilePage = () => {
       try {
         const response = await accountService.getProfile();
         setProfile(response.data);
-        // console.log(response.data); // Original console.log
         setFormData({
           name: response.data.name || '',
           email: response.data.email || '',
@@ -64,13 +63,10 @@ const UserProfilePage = () => {
   }, [navigate, showNotification]);
 
   const handleInputChange = (e) => {
-    console.log('Event target:', e.target); // Log the whole e.target object
-    console.log('Event target name attribute:', e.target.name); // Specifically log the name attribute
-    console.log('Event target value attribute:', e.target.value); // Specifically log the value attribute
 
     const { name, value } = e.target;
     // More explicit logging for the destructured variables
-    console.log(`Input changed - Destructured name: '${name}', Destructured value: '${value}'`); 
+    // console.log(`Input changed - Destructured name: '${name}', Destructured value: '${value}'`); 
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 

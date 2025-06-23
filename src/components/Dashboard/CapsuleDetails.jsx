@@ -57,7 +57,7 @@ const CapsuleDetailsPage = () => {
       try {
         const data = await capsuleService.getCapsuleById(capsuleId);
         setCapsule(data);
-        console.log('Capsule details:', data);
+        // console.log('Capsule details:', data);
       } catch (err) {
         setError(err.message || 'Failed to load capsule details.');
       } finally {
@@ -92,7 +92,7 @@ const CapsuleDetailsPage = () => {
   const getFilenameFromUrl = (url) => {
     if (!url) return 'file';
     try {
-      console.log(url)
+      // console.log(url)
       const path = new URL(url).pathname;
       return path.substring(path.lastIndexOf('/') + 1);
     } catch (e) {

@@ -60,7 +60,7 @@ const PublicCapsuleViewPage = () => {
         setError('');
         const data = await capsuleService.getPublicCapsuleByToken(accessToken);
         setCapsule(data);
-        console.log('Public Capsule Data:', data);
+        // console.log('Public Capsule Data:', data);
       } catch (err) {
         setError(err.message || 'Could not load the time capsule. The link might be invalid or expired.');
         console.error(err);

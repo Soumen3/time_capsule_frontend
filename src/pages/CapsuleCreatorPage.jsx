@@ -68,11 +68,11 @@ const CapsuleCreatorPage = () => {
       deliveryTime,
     };
 
-    console.log('Submitting capsule data:', capsuleData);
+    // console.log('Submitting capsule data:', capsuleData);
 
     try {
       const response = await capsuleService.createCapsule(capsuleData);
-      console.log('Capsule created successfully:', response);
+      // console.log('Capsule created successfully:', response);
       setSuccessMessage('Capsule created successfully! Redirecting...');
       // Optionally reset form or redirect
       setTimeout(() => {

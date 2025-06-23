@@ -22,7 +22,6 @@ const Navbar = () => {
     (async () => {
       const currentUser = await authService.getCurrentUser();
       setUser(currentUser);
-      // Optionally: console.log(currentUser);
     })();
   }, []);
 

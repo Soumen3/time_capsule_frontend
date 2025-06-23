@@ -23,7 +23,7 @@ const authService = {
     try {
       // Backend will now create an inactive user and send OTP
       const response = await api.post('accounts/register/', userData);
-      console.log(response)
+      // console.log(response)
       return response.data;
 
     } catch (error) {
@@ -75,7 +75,7 @@ const authService = {
       const response = await api.post('accounts/logout/');
       localStorage.removeItem('authToken');
       localStorage.removeItem('user');
-      console.log('Logout successful:', response.data);
+      // console.log('Logout successful:', response.data);
     }
     catch (error) {
       console.error('Logout error:', error.response?.data || error.message);
